@@ -13,9 +13,9 @@ class GithubService {
 //  let githubURLString = "http://api.github.com/search/repositories"
   let localHost = "http://127.0.0.1:3000"
   
-  func fetchReposWithSearchTerm(searchString : String) {
+  func fetchReposWithSearchTerm(searchDescription : String, completionHandler: ([Repository]?, NSError?)->Void) {
     
-    let fullURLString = self.localHost + "q=\(searchString)"
+    let fullURLString = self.localHost + "q=\(searchDescription)"
     let nsurl = NSURL(string: fullURLString)
     
     let request = NSURLRequest(URL: nsurl!)
@@ -23,7 +23,18 @@ class GithubService {
       if error != nil {
         // Handle the error
       } else {
-        response
+        if let httpResponse = response as? NSHTTPURLResponse {
+          println(httpResponse.statusCode)
+          if httpResponse.statusCode == 200 {
+            let parsedRepos = RepositoryJSONParser.reposFromJSONData(data)
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+              completionHandler(parsedRepos, nil)
+            })
+          } else {
+            // There was a problem with the response
+          }
+        }
       }
     })
     

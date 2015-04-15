@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADF7E1401ADD961B00421399 /* RepoSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */; };
 		ADFD756C1ADC5ACC00011456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */; };
 		ADFD75711ADC5ACC00011456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFD756F1ADC5ACC00011456 /* Main.storyboard */; };
 		ADFD75731ADC5ACC00011456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFD75721ADC5ACC00011456 /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSearchTableViewController.swift; sourceTree = "<group>"; };
 		ADFD75661ADC5ACC00011456 /* GithubzToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubzToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFD756A1ADC5ACC00011456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				ADFD758B1ADC5C4700011456 /* MainMenuTableViewController.swift */,
 				ADFD758F1ADC6B8300011456 /* GithubService.swift */,
+				ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADFD758C1ADC5C4700011456 /* MainMenuTableViewController.swift in Sources */,
+				ADF7E1401ADD961B00421399 /* RepoSearchTableViewController.swift in Sources */,
 				ADFD756C1ADC5ACC00011456 /* AppDelegate.swift in Sources */,
 				ADFD75951ADD7F1800011456 /* RepositoryJSONParser.swift in Sources */,
 				ADFD75901ADC6B8300011456 /* GithubService.swift in Sources */,
@@ -455,6 +459,7 @@
 				ADFD75871ADC5ACC00011456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADFD75881ADC5ACC00011456 /* Build configuration list for PBXNativeTarget "GithubzToGoTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				ADFD758A1ADC5ACC00011456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

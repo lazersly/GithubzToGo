@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Repository {
+struct Repository {
   var id : String
   var name : String
   var author : String
