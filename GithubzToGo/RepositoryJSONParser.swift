@@ -16,18 +16,19 @@ class RepositoryJSONParser {
     
     if let
       root = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &jsonError) as? [String : AnyObject],
-      items = root["items"] as? [[String : AnyObject]]
+    items = root["items"] as? [[String : AnyObject]]
     {
       for itemDescription in items {
         if let
-          id = itemDescription["id"] as? String,
           name = itemDescription["name"] as? String,
+          id = itemDescription["id"] as? NSNumber,
           ownerDescription = itemDescription["owner"] as? [String : AnyObject],
           author = ownerDescription["login"] as? String,
           htmlURL = itemDescription["html_url"] as? String,
           description = itemDescription["description"] as? String
         {
-          let repo = Repository(id: id, name: name, author: author, description: description, htmlURL: htmlURL)
+          let id_str = id.description
+          let repo = Repository(id: id_str, name: name, author: author, description: description, htmlURL: htmlURL)
           repos.append(repo)
         }
       }

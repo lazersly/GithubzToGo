@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   var oAuthService = OAuthService()
+  let transitionDuration = 0.5
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
@@ -55,10 +56,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
     //TODO: Save the token from Github
+    self.oAuthService.handleRedirect(url, completionHandler: { (tokenGranted) -> Void in
+      if tokenGranted {
+        self.transitionToMainMenu()
+      } else {
+        // Display an error on the presenting screen
+      }
+    })
     
     return true
   }
-
+  
+  func transitionToMainMenu() {
+    if let
+      currentRootVC = self.window?.rootViewController as? LoginViewController,
+      storyboard = currentRootVC.storyboard {
+        let newVC = storyboard.instantiateViewControllerWithIdentifier("MainMenuNav") as! UINavigationController
+        UIView.transitionFromView(currentRootVC.view, toView: newVC.view, duration: transitionDuration, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: { (finished) -> Void in
+          self.window?.rootViewController = newVC
+        })
+    }
+  }
 
 }
 
