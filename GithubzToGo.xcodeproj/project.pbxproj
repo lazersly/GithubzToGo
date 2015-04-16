@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */; };
+		AD5B97B51ADEDFCD00248DBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */; };
 		ADF7E1401ADD961B00421399 /* RepoSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */; };
 		ADFD756C1ADC5ACC00011456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */; };
 		ADFD75711ADC5ACC00011456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFD756F1ADC5ACC00011456 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSearchTableViewController.swift; sourceTree = "<group>"; };
 		ADFD75661ADC5ACC00011456 /* GithubzToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubzToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFD756A1ADC5ACC00011456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */,
-				ADFD75981ADD8C6600011456 /* Constants.swift */,
 				ADFD75931ADC711C00011456 /* Models */,
 				ADFD758E1ADC5C8D00011456 /* Controllers */,
 				ADFD758D1ADC5C5F00011456 /* Views */,
@@ -140,6 +143,7 @@
 				ADFD758B1ADC5C4700011456 /* MainMenuTableViewController.swift */,
 				ADFD758F1ADC6B8300011456 /* GithubService.swift */,
 				ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */,
+				AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +154,8 @@
 				ADFD75911ADC711400011456 /* Repository.swift */,
 				ADFD75941ADD7F1800011456 /* RepositoryJSONParser.swift */,
 				ADFD75961ADD8AFB00011456 /* server.js */,
+				ADFD75981ADD8C6600011456 /* Constants.swift */,
+				AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5B97B51ADEDFCD00248DBA /* LoginViewController.swift in Sources */,
 				ADFD758C1ADC5C4700011456 /* MainMenuTableViewController.swift in Sources */,
 				ADF7E1401ADD961B00421399 /* RepoSearchTableViewController.swift in Sources */,
 				ADFD756C1ADC5ACC00011456 /* AppDelegate.swift in Sources */,
@@ -262,6 +269,7 @@
 				ADFD75901ADC6B8300011456 /* GithubService.swift in Sources */,
 				ADFD75921ADC711400011456 /* Repository.swift in Sources */,
 				ADFD75991ADD8C6600011456 /* Constants.swift in Sources */,
+				AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var oAuthService = OAuthService()
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let authenticated = self.oAuthService.isAuthenticated()
+    
+    if authenticated == true {
+      if let
+        currentRootVC = self.window?.rootViewController as? LoginViewController,
+        storyboard = currentRootVC.storyboard {
+          let mainMenuNav = storyboard.instantiateViewControllerWithIdentifier("MainMenuNav") as! UINavigationController
+          self.window?.rootViewController = mainMenuNav
+      }
+    }
+    
     return true
   }
 
@@ -42,7 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    <#code#>
+    //TODO: Save the token from Github
+    
+    return true
   }
 
 

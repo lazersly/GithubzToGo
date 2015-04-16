@@ -10,6 +10,8 @@ import Foundation
 
 class GithubService {
   
+  static let sharedInstance : GithubService = GithubService()
+  
 //  let githubURLString = "http://api.github.com/search/repositories"
   let localHost = "http://127.0.0.1:3000"
   
@@ -36,8 +38,7 @@ class GithubService {
           }
         }
       }
-    })
-    
+    }) 
   }
   
 }
