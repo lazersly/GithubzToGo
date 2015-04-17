@@ -55,7 +55,6 @@ class OAuthService {
 
     })
     dataTask.resume()
-    
   }
   
   func isAuthenticated() -> Bool {

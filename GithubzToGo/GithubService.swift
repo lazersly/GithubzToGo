@@ -33,7 +33,7 @@ class GithubService {
         // Handle the error
       } else {
         if let httpResponse = response as? NSHTTPURLResponse {
-          println(httpResponse.statusCode)
+          println("Request Status Code: \(httpResponse.statusCode)")
           if httpResponse.statusCode == 200 {
             let parsedRepos = RepositoryJSONParser.reposFromJSONData(data)
             
