@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD1C00471AE194D000ED5380 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00461AE194D000ED5380 /* UserSearchViewController.swift */; };
 		AD1C00491AE1957900ED5380 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00481AE1957900ED5380 /* UserCollectionViewCell.swift */; };
+		AD1C007D1AE4931400ED5380 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */; };
+		AD1C00811AE4966800ED5380 /* ImageResizeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00801AE4966800ED5380 /* ImageResizeService.swift */; };
 		AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */; };
 		AD5B97B51ADEDFCD00248DBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */; };
 		AD5C707F1AE17280001918B8 /* UsersJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		AD1C00461AE194D000ED5380 /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		AD1C00481AE1957900ED5380 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		AD1C00801AE4966800ED5380 /* ImageResizeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizeService.swift; sourceTree = "<group>"; };
 		AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersJSONParser.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */,
 				AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */,
 				ADFD75961ADD8AFB00011456 /* server.js */,
+				AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */,
+				AD1C00801AE4966800ED5380 /* ImageResizeService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 				ADFD75901ADC6B8300011456 /* GithubService.swift in Sources */,
 				ADFD75921ADC711400011456 /* Repository.swift in Sources */,
 				ADFD75991ADD8C6600011456 /* Constants.swift in Sources */,
+				AD1C00811AE4966800ED5380 /* ImageResizeService.swift in Sources */,
 				AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */,
 				AD5C707F1AE17280001918B8 /* UsersJSONParser.swift in Sources */,
+				AD1C007D1AE4931400ED5380 /* ImageFetcher.swift in Sources */,
 				AD5C70811AE17311001918B8 /* User.swift in Sources */,
 				AD1C00491AE1957900ED5380 /* UserCollectionViewCell.swift in Sources */,
 			);
