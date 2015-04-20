@@ -10,7 +10,7 @@ import UIKit
 
 class GithubService {
   
-  static let sharedInstance : GithubService = GithubService()
+  static let sharedInstance = GithubService()
   
   let githubRepoURLString = "https://api.github.com/search/repositories"
   let githubUsersURLString = "https://api.github.com/search/users"
@@ -51,7 +51,7 @@ class GithubService {
   }
   
   func fetchUsersWithSearchTerm(searchTerm: String, completionHandler: ([User]?, NSError?)->Void) {
-    let fullURL = self.githubUsersURLString + "q=\(searchTerm)"
+    let fullURL = self.githubUsersURLString + "?q=\(searchTerm)"
     let nsurl = NSURL(string: fullURL)
     
     let request = NSMutableURLRequest(URL: nsurl!)

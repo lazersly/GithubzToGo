@@ -25,7 +25,6 @@
 		ADFD75901ADC6B8300011456 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD758F1ADC6B8300011456 /* GithubService.swift */; };
 		ADFD75921ADC711400011456 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD75911ADC711400011456 /* Repository.swift */; };
 		ADFD75951ADD7F1800011456 /* RepositoryJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD75941ADD7F1800011456 /* RepositoryJSONParser.swift */; };
-		ADFD75971ADD8AFB00011456 /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = ADFD75961ADD8AFB00011456 /* server.js */; };
 		ADFD75991ADD8C6600011456 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD75981ADD8C6600011456 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		ADFD758F1ADC6B8300011456 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		ADFD75911ADC711400011456 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		ADFD75941ADD7F1800011456 /* RepositoryJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryJSONParser.swift; sourceTree = "<group>"; };
-		ADFD75961ADD8AFB00011456 /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		ADFD75981ADD8C6600011456 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,11 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				ADFD75911ADC711400011456 /* Repository.swift */,
-				ADFD75941ADD7F1800011456 /* RepositoryJSONParser.swift */,
 				AD5C70801AE17311001918B8 /* User.swift */,
+				ADFD75941ADD7F1800011456 /* RepositoryJSONParser.swift */,
 				AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */,
 				AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */,
-				ADFD75961ADD8AFB00011456 /* server.js */,
 				AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */,
 				AD1C00801AE4966800ED5380 /* ImageResizeService.swift */,
 			);
@@ -261,7 +258,6 @@
 				ADFD75711ADC5ACC00011456 /* Main.storyboard in Resources */,
 				ADFD75761ADC5ACC00011456 /* LaunchScreen.xib in Resources */,
 				ADFD75731ADC5ACC00011456 /* Images.xcassets in Resources */,
-				ADFD75971ADD8AFB00011456 /* server.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

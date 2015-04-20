@@ -21,11 +21,15 @@ class ImageFetcher {
       if let imageData = NSData(contentsOfURL: imageURL) {
         let image = UIImage(data: imageData)
         let fetchedResizedImage = ImageResizeService.resizeImage(image!, size: size)
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+          completionHandler(returnedImage: fetchedResizedImage)
+        })
+      } else {
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+          completionHandler(returnedImage: nil)
+        })
       }
       
-      NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-        completionHandler(returnedImage: fetchedResizedImage)
-      })
     }
   }
   
