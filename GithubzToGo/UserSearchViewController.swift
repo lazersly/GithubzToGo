@@ -107,6 +107,13 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollect
     })
   }
   
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    return text.validForGithubSearch()
+  }
+  
+  //MARK:
+  //MARK: Segue
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "ShowUserDetail" {
       //TODO: Prepare next screen

@@ -22,9 +22,10 @@ class UsersJSONParser {
           if let
             id = item["id"] as? NSNumber,
             htmlURL = item["html_url"] as? String,
-            avatarURL = item["avatar_url"] as? String
+            avatarURL = item["avatar_url"] as? String,
+            score = item["score"] as? String
           {
-              let newUser = User(id: id.stringValue, htmlURL: htmlURL, avatarURL: avatarURL)
+              let newUser = User(id: id.stringValue, avatarURL: avatarURL, htmlURL: htmlURL, score: score)
               users.append(newUser)
           }
         }

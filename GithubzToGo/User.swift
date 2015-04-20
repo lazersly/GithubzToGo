@@ -11,12 +11,14 @@ import UIKit
 class User {
   var id : String!
   var htmlURL : String!
+  var score : String!
   var avatarURL : String!
   var avatarImage : UIImage?
   
-  init(id : String!, htmlURL : String!, avatarURL : String!) {
+  init(id : String!, avatarURL : String!, htmlURL : String!, score: String!) {
     self.id = id
-    self.htmlURL = htmlURL
     self.avatarURL = avatarURL
+    self.htmlURL = htmlURL
+    self.score = score
   }
 }

@@ -59,4 +59,19 @@ class RepoSearchTableViewController: UITableViewController, UISearchBarDelegate 
     })
   }
   
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    return text.validForGithubSearch()
+  }
+  
+  //MARK:
+  //MARK: Segue
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowRepoWebpage" {
+      let nextVC = segue.destinationViewController as! RepoWebViewController
+      let selectedRepo = repoResults[self.tableView.indexPathForSelectedRow()!.row]
+      nextVC.selectedRepo = selectedRepo
+    }
+  }
+  
 }

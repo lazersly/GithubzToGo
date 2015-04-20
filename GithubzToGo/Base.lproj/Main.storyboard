@@ -196,6 +196,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-ct-aUq" id="muV-FC-EuJ">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="akp-hK-b7e" kind="show" identifier="ShowRepoWebpage" id="h87-zP-iJL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -210,6 +213,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9R-fL-jMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="226"/>
+        </scene>
+        <!--Repo Web View Controller-->
+        <scene sceneID="VQr-7f-nsX">
+            <objects>
+                <viewController id="akp-hK-b7e" customClass="RepoWebViewController" customModule="GithubzToGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VpI-yc-fU4"/>
+                        <viewControllerLayoutGuide type="bottom" id="924-eC-KNT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l8h-yk-bUx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqF-BD-h4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="226"/>
         </scene>
         <!--User Search View Controller-->
         <scene sceneID="xxH-1k-iwp">

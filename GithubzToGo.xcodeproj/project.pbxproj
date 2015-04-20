@@ -11,10 +11,13 @@
 		AD1C00491AE1957900ED5380 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00481AE1957900ED5380 /* UserCollectionViewCell.swift */; };
 		AD1C007D1AE4931400ED5380 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */; };
 		AD1C00811AE4966800ED5380 /* ImageResizeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00801AE4966800ED5380 /* ImageResizeService.swift */; };
+		AD1C00831AE4C3B300ED5380 /* RepoWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1C00821AE4C3B300ED5380 /* RepoWebViewController.swift */; };
 		AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */; };
 		AD5B97B51ADEDFCD00248DBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */; };
 		AD5C707F1AE17280001918B8 /* UsersJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */; };
 		AD5C70811AE17311001918B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C70801AE17311001918B8 /* User.swift */; };
+		ADA580031AE4C7B90034D871 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA580021AE4C7B90034D871 /* UserDetailViewController.swift */; };
+		ADA580051AE4CF240034D871 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA580041AE4CF240034D871 /* StringExtension.swift */; };
 		ADF7E1401ADD961B00421399 /* RepoSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */; };
 		ADFD756C1ADC5ACC00011456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */; };
 		ADFD75711ADC5ACC00011456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFD756F1ADC5ACC00011456 /* Main.storyboard */; };
@@ -43,10 +46,13 @@
 		AD1C00481AE1957900ED5380 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1C007C1AE4931400ED5380 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		AD1C00801AE4966800ED5380 /* ImageResizeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizeService.swift; sourceTree = "<group>"; };
+		AD1C00821AE4C3B300ED5380 /* RepoWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoWebViewController.swift; sourceTree = "<group>"; };
 		AD5B97B21ADEDEBB00248DBA /* OAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD5C707E1AE17280001918B8 /* UsersJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersJSONParser.swift; sourceTree = "<group>"; };
 		AD5C70801AE17311001918B8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADA580021AE4C7B90034D871 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		ADA580041AE4CF240034D871 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSearchTableViewController.swift; sourceTree = "<group>"; };
 		ADFD75661ADC5ACC00011456 /* GithubzToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubzToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFD756A1ADC5ACC00011456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 			children = (
 				ADFD756B1ADC5ACC00011456 /* AppDelegate.swift */,
 				ADFD75981ADD8C6600011456 /* Constants.swift */,
+				ADA580041AE4CF240034D871 /* StringExtension.swift */,
 				ADFD75931ADC711C00011456 /* Models */,
 				ADFD758E1ADC5C8D00011456 /* Controllers */,
 				ADFD758D1ADC5C5F00011456 /* Views */,
@@ -153,10 +160,12 @@
 			isa = PBXGroup;
 			children = (
 				ADFD758B1ADC5C4700011456 /* MainMenuTableViewController.swift */,
+				AD1C00821AE4C3B300ED5380 /* RepoWebViewController.swift */,
 				ADFD758F1ADC6B8300011456 /* GithubService.swift */,
 				ADF7E13F1ADD961B00421399 /* RepoSearchTableViewController.swift */,
 				AD5B97B41ADEDFCD00248DBA /* LoginViewController.swift */,
 				AD1C00461AE194D000ED5380 /* UserSearchViewController.swift */,
+				ADA580021AE4C7B90034D871 /* UserDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA580031AE4C7B90034D871 /* UserDetailViewController.swift in Sources */,
 				AD5B97B51ADEDFCD00248DBA /* LoginViewController.swift in Sources */,
 				AD1C00471AE194D000ED5380 /* UserSearchViewController.swift in Sources */,
 				ADFD758C1ADC5C4700011456 /* MainMenuTableViewController.swift in Sources */,
@@ -284,9 +294,11 @@
 				ADFD75901ADC6B8300011456 /* GithubService.swift in Sources */,
 				ADFD75921ADC711400011456 /* Repository.swift in Sources */,
 				ADFD75991ADD8C6600011456 /* Constants.swift in Sources */,
+				AD1C00831AE4C3B300ED5380 /* RepoWebViewController.swift in Sources */,
 				AD1C00811AE4966800ED5380 /* ImageResizeService.swift in Sources */,
 				AD5B97B31ADEDEBB00248DBA /* OAuthService.swift in Sources */,
 				AD5C707F1AE17280001918B8 /* UsersJSONParser.swift in Sources */,
+				ADA580051AE4CF240034D871 /* StringExtension.swift in Sources */,
 				AD1C007D1AE4931400ED5380 /* ImageFetcher.swift in Sources */,
 				AD5C70811AE17311001918B8 /* User.swift in Sources */,
 				AD1C00491AE1957900ED5380 /* UserCollectionViewCell.swift in Sources */,
