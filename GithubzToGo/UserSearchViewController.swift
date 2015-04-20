@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource {
+class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
   @IBOutlet var searchBar: UISearchBar!
   @IBOutlet var collectionView: UICollectionView!
@@ -19,12 +19,21 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollect
     }
   }
   let githubService = GithubService()
+  let cellAnimationDuration : NSTimeInterval = 0.5
+  let cellAnimationTransformScale : CGFloat = 0.1
   
   override func viewDidLoad() {
         super.viewDidLoad()
     self.searchBar.delegate = self
     self.collectionView.dataSource = self
 
+  }
+  
+  //MARK:
+  //MARK: UICollectionViewDelegate
+  
+  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
   }
   
   
@@ -47,10 +56,42 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollect
       ImageFetcher.sharedImageFetcher.fetchImageAtURL(NSURL(string: user.avatarURL)!, size: cell.frame.size, completionHandler: { (returnedImage) -> Void in
         user.avatarImage = returnedImage
         cell.imageView.image = user.avatarImage
+        
+        self.animateCellOntoScreen(cell)
       })
     }
     
     return cell
+  }
+  
+  //MARK:
+  //MARK: Custom Animations
+  
+  func animateCellOntoScreen(cell: UserCollectionViewCell) {
+    let imageView = cell.imageView
+    
+    imageView.alpha = 0
+    imageView.transform = CGAffineTransformMakeScale(cellAnimationTransformScale, cellAnimationTransformScale)
+    
+    UIView.animateWithDuration(cellAnimationDuration, delay: NSTimeInterval.NaN, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+      imageView.alpha = 1
+      imageView.transform = CGAffineTransformIdentity
+    }) { (finished) -> Void in
+      // Completion block
+    }
+    
+//    UIView.animateWithDuration(cellAnimationDuration, animations: { () -> Void in
+//      imageView.alpha = 1
+//      imageView.transform = CGAffineTransformIdentity
+//    })
+    
+//    UIView.animateWithDuration(cellAnimationDuration, delay: NSTimeInterval.NaN, options: UIViewAnimationOptions.Autoreverse, animations: { () -> Void in
+//           imageView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+//    }) { (finished) -> Void in
+//           imageView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+//    }
+    
+    
   }
   
   //MARK:
@@ -64,6 +105,13 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UICollect
         // There was an error to handle
       }
     })
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowUserDetail" {
+      //TODO: Prepare next screen
+    }
+    
   }
 
 }

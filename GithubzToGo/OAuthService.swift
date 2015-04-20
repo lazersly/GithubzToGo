@@ -65,7 +65,7 @@ class OAuthService {
   
   func githubAuthenticationToken() -> String? {
     if let token = NSUserDefaults.standardUserDefaults().objectForKey(self.userDefaultGithubTokenKey) as? String {
-      println("Github Token: \(token)")
+//      println("Github Token: \(token)")
       return token
     } else {
       println("No Github Token")
